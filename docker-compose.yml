@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: digitalfactory
+      POSTGRES_USER: postgres
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql
+
+  
+    
